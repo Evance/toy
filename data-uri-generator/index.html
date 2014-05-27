@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gbk" />
+<meta name="data-spm" content="1" />
+<title>Data URI Generator</title>
+<style type="text/css">
+body {
+	background:#ccc;
+}
+h1 {
+	margin:0;
+	padding:0;
+}
+#page {
+	width:800px;
+	margin:0 auto;
+	background:#fff;
+	border:1px solid #888;
+	border-radius:3px;
+	box-shadow:3px 4px 3px #999;
+}
+#data-uri-generator {
+	padding:10px;
+	overflow:auto;
+}
+#img-preview {
+	width:400px;
+	height:400px;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAHlJREFUOI2dk1EOwCAIQ63Zibz/FfRK3ceiYQRnGZ8Ir6WJ6L2zuAJQyKfdWvPPr6pRcy4rVaeiVc9U9YoZ9QXYKStuwgwybhbAD6tZbB2oWYCHyTHGPweSOnAGANjmQfIMiC60QOkEC7H/RAZ8wVIAnwXJcmUWozxuo+o0g66ZQsEAAAAASUVORK5CYII=) 0 0;
+}
+textarea {
+	width:90%;
+	border:1px solid #ccc;
+	padding:4px;
+}
+textarea:focus{
+	border:1px solid #69c;
+}
+</style>
+<head>
+<body>
+<div id="page">
+	<div id="data-uri-generator">
+		<h1>Data URI Generator<h1>
+		<form>
+			<input id="file-input" type="file" />
+		</form>
+		<textarea id="data-uri-ta" rows="5" placeholder="the result will be here"></textarea>
+
+		<div id="img-preview">
+			<img src="" id="img-sample" />
+		</div>
+	</div>
+</div>
+<script>
+var canvas = document.createElement("canvas"),
+	img = new Image(),
+	context = canvas.getContext("2d"),
+	data_url_ta = document.getElementById("data-uri-ta"),
+	img_sample = document.getElementById("img-sample"),
+	file_input = document.getElementById("file-input");
+file_input.onchange = function(evt) {
+	var f = this.files[0],
+		reader = new FileReader(),
+		uri;
+	reader.readAsDataURL(f);
+	reader.onloadend = function() {
+		uri = this.result;
+		data_url_ta.value = uri;
+		img_sample.src= uri;
+	}
+}
+</script>
+</body>
+</html>
