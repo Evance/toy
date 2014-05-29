@@ -67,6 +67,8 @@ blockquote,
     -moz-border-radius:4px;
     -webkit-radius:4px;
     border-radius:4px;
+    border:1px solid #ccc;
+    padding:6px;
 }
 .box-shadow {
     -moz-box-shadow:1px 1px 8px #ccc;
@@ -93,4 +95,27 @@ blockquote,
     background-color:#FCC;
     border-color:#F00;
 }
-
+done,
+ing,
+todo {
+    color:#fff;
+    font-size:12px;
+    content:"中国";
+}
+done:after {        
+    content:"已完成";
+    background:#228B22;     
+    border-radius:3px;
+    padding:3px; 
+}
+ing:after {
+    content:"进行中";
+    background:#f90;
+    border-radius:3px;
+    padding:3px; 
+}
+todo:after {
+    content:"未开始";background:#f00;
+    border-radius:3px;
+    padding:3px; 
+}

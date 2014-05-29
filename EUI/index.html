@@ -4,10 +4,11 @@
 <meta charset="utf-8" /> 
 <title>EUI</title>
 <link rel="stylesheet" href="./style.css"/>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-<meta content="yes" name="apple-mobile-web-app-capable" /> 
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<meta content="telephone=no" name="format-detection" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="no" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
 <style>
 body {
 	background:#eee;
@@ -25,53 +26,56 @@ h1 {
 #wrapper > * {
 	margin:20px 0;
 }
-#border-radius {
-	background:#ccc;
-	padding:4px;
-}
 </style>
 </head>
 <body>
 <h1>EUI</h1>
 
-<div id="wrapper">
+<div id="wrapper">	
+
+    <q> &lt;q&gt; /></q>
+
+    <blockquote>
+        &lt;blockquote /&gt;
+    </blockquote>
+    
+    <em> &lt;em&gt; </em>    
+    <br /><br />
+
+    <code> &lt;code /&gt; </code>
+    <hr />    
+
+    <div class="quote">
+        .quote
+    </div>
+
+    <div class="box-shadow">
+        .box-shadow
+    </div>
+
+
+    <div class="border-radius" id="border-radius">
+        .border-radius
+    </div>
 	
-	<div class="quote">
-		div.className = quote
-	</div>
+    <div class="success">
+        .success
+    </div>
 
-	<blockquote>
-		el.tagName = blockquote
-	</blockquote>
+    <div class="warning">
+        .warning
+    </div>
 
-	<q> el.tagName = q
-	</q>
+    <div class="error">
+        .error
+    </div>
 
-	<div class="box-shadow">
-		div.className = box-shadow
-	</div>
+    <p><ing /></p>
+    <p><done /></p>
+    <p><todo /></p>
 
-	<code>
-		&lt;code /&gt;
-	</code>
+<zero />
 
-	<div class="border-radius" id="border-radius">
-		div.className = border-radius
-	</div>
-
-	<em>el.tagName = em</em>
-
-	<div class="success">
-		div.className = success
-	</div>
-
-	<div class="warning">
-		div.className = warning
-	</div>
-
-	<div class="error">
-		div.className = error
-	</div>			
 </div>
 </body>
 </html>
